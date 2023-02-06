@@ -1,10 +1,9 @@
 import React from 'react'
-import Index from '../components/Index';
-
+import Nav from '../components/Nav'
 const Login = () => {
   return (
     <>
-      <Index/>
+      <Nav/>
       <div>Login</div>
     </>
   );

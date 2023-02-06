@@ -1,10 +1,10 @@
 import React from 'react'
-import Index from '../components/Index'
+import Nav from '../components/Nav'
 
 const Register = () => {
     return (
     <>
-        <Index/>
+        <Nav/>
         <div>Register</div>
     </>  
     

@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .indexul{
@@ -28,6 +29,7 @@
   padding: 0 2vh;
   text-decoration: none;
   transition-duration: 0.3s;
+  line-height: 45px;
 }
 .indexli:hover{
   color: white;
