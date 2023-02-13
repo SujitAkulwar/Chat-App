@@ -16,7 +16,11 @@ const Login = () => {
       <label> Email : </label><input type={Text} className="name" name='name'></input>
       <label> Password : </label><input type={Text} className="name" name='pass'></input>
       <input type={'submit'} className="submit"></input>
+      <a href='./register' className='registerlink'>
+        New user register here !!
+      </a>
     </form>
+
   );
 
   

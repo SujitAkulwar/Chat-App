@@ -1,0 +1,32 @@
+
+.users{
+    width: 300px;
+    height: 85vh;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid white;
+}
+.user{
+    display: flex;
+    height: 50px;
+    width: 300px;
+    border: 1px  solid white;
+}
+.userlogo{
+    display: flex;
+    width: 50px;
+    justify-content: center;
+}
+.userimg{
+    padding: auto;
+    margin: auto;
+    height: 40px;
+    width: auto;
+    border-radius: 50px;
+}
+.username{
+    width: 250px;
+    padding:auto;
+    font-size: 25px;
+    line-height: 48px;
+    padding-left: 20px;
+}

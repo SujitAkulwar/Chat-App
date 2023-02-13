@@ -16,6 +16,9 @@ const Register = () => {
       <label> Email : </label><input type={Text} className="name" name='name'></input>
       <label> Password : </label><input type={Text} className="name" name='pass'></input>
       <input type={'submit'} className="submit"></input>
+      <a href='./login' className='registerlink'>
+        Already User Login here !!
+      </a>
     </form>
   );
 
