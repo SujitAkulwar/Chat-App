@@ -1,20 +1,45 @@
 
 .users{
-    width: 300px;
-    height: 85vh;
+    width: 400px;
+    height: 100%;
     font-family: 'Roboto', sans-serif;
-    border: 1px solid white;
+    border: 1px solid rgb(87, 87, 87);
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+.users {
+    overflow: auto;
+}
+
+.users::-webkit-scrollbar{
+  width: 12px;
+  border-radius: 10px;
+}
+
+.users::-webkit-scrollbar-track{
+  background: #2f2f2f;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background: #9b9b9b;
+  border: 1px solid #91cbd4;
+  border-radius: 15px;
+  height: 20px;
 }
 .user{
     display: flex;
     height: 50px;
-    width: 300px;
-    border: 1px  solid white;
+    width: 100%;
+    border: 1px  solid rgb(81, 81, 81);
 }
 .userlogo{
     display: flex;
     width: 50px;
     justify-content: center;
+    margin-left: 10px;
 }
 .userimg{
     padding: auto;

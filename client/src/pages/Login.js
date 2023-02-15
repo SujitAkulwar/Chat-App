@@ -12,19 +12,15 @@ const Login = () => {
   };
   
   const loginform = (
-    <form onSubmit={handleSubmit}>
-      <label> Email : </label><input type={Text} className="name" name='name'></input>
-      <label> Password : </label><input type={Text} className="name" name='pass'></input>
+    <form onSubmit={handleSubmit} className="f1" >
+      <label> Email : </label><input type={Text} className="i1" name='name'></input>
+      <label> Password : </label><input type={Text} className="i1" name='pass'></input>
       <input type={'submit'} className="submit"></input>
       <a href='./register' className='registerlink'>
         New user register here !!
       </a>
     </form>
-
-  );
-
-  
-  
+  ); 
   
   return (
     <>

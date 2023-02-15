@@ -12,16 +12,16 @@ const Register = () => {
   };
   
   const Registerform = (
-    <form onSubmit={handleSubmit}>
-      <label> Email : </label><input type={Text} className="name" name='name'></input>
-      <label> Password : </label><input type={Text} className="name" name='pass'></input>
+    <form onSubmit={handleSubmit} className="f1">
+      <label> Email : </label><input type={Text} className="i1" name='name'></input>
+      <label> Password : </label><input type={Text} className="i1" name='pass'></input>
       <input type={'submit'} className="submit"></input>
       <a href='./login' className='registerlink'>
         Already User Login here !!
       </a>
     </form>
   );
-
+ 
   
   
   

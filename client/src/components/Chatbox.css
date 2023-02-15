@@ -1,0 +1,62 @@
+
+.chatbox{
+    height: 480px;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid rgb(87, 87, 87);
+    max-height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.chatbox::-webkit-scrollbar{
+  width: 12px;
+  border-radius: 5px;
+}
+
+.chatbox::-webkit-scrollbar-track{
+  background: #2f2f2f;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+  width: 10px;
+  background: #9b9b9b;
+  border: 1px solid #91cbd4;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.text1{
+    padding: 10px;
+    margin:10px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+    display: flex;
+}
+.text2{
+    padding: 10px;
+    margin:10px;
+    margin-left:auto;
+    display: flex;
+    justify-content: flex-end;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px;
+}
+.msg{
+    display: flex;
+    align-items: center;
+    line-height: 50px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    padding:10px 20px;
+    margin: 0 10px;
+    background-color: rgb(126, 0, 0);
+    border-radius: 20px;
+    max-width: 600px;
+    line-break: loose;
+    line-height: 30px;
+}
