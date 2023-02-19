@@ -12,7 +12,7 @@ const home = (
         Chat App lets you connect with the world
       </div>
       <button className='homelink'>
-        Get started
+        <a href="/Register" >Get started</a>
       </button>
     </div>
     <div className='homeimgbox'>

@@ -16,8 +16,6 @@ const userid = (
     </div>
 )
 
-
-
 const textbox = (
     <form className='f2'>
       <input type={Text} className="i2" name='text'></input>
@@ -25,11 +23,6 @@ const textbox = (
     </form>
 )
 
-// const send = (val) =>{
-//         <div>
-//             val
-//         </div>
-//     }
 const Chats = () => {
     
     return (

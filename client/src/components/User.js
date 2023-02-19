@@ -5,7 +5,7 @@ const user = (
   <div className='user'>
     <div className='userlogo'>
       <img
-        src={require('../img/logo.jpg')}
+        src={require('../img/logo2.png')}
         alt="description"
         className='userimg'
       />
@@ -21,24 +21,6 @@ const User = () => {
   return (
     <>
       <div className='users'> 
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
-        {user}
         {user}
         {user}
       </div>

@@ -45,3 +45,8 @@ body::-webkit-scrollbar{
 .homelink:hover,.homelink:focus{
     background-color:  rgb(120, 200, 0);
 }
+.homelink a{
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+}

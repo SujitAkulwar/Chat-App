@@ -3,23 +3,24 @@ import './Chatbox.css'
 
 
 const Chatbox = () => {
+    const text = "font-family: 'Roboto', sans-serif;"
     const ny = (
         <div className='text1'>
             <img
-                src={require('../img/logo.jpg')}
+                src={require('../img/logo2.png')}
                 alt="description"
                 className='userimg'
             />
-            <div className='msg'>
-                 sans-serif;font-family: 'Roboto', sans-serif;font-family: 'Roboto', sans-serif;
+            <div className='msg m1'>
+                 {text}
             </div>
         </div>
     )
 
     const y = (
         <div className='text2'>
-            <div className='msg'>
-                padding: 10px;padding: 10px;padding: 10px;padding: 10px;padding: 10px;padding: 10px;
+            <div className='msg m2'>
+                {text}
             </div>
             <img
                 src={require('../img/logo.jpg')}
@@ -32,6 +33,18 @@ const Chatbox = () => {
 
     return (
         <div className='chatbox'>
+            {ny}
+            {y}
+            {ny}
+            {y}
+            {ny}
+            {y}
+            {ny}
+            {y}
+            {ny}
+            {y}
+            {ny}
+            {y}
             {ny}
             {y}
             {ny}
