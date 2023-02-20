@@ -1,13 +1,13 @@
 // import React,{useState} from 'react'
 // import { ReactDOM } from 'react';
 import Nav from '../components/Nav'
-import './Login.css';
+import './auth.css';
 
 const Login = () => {
 
   // const [errorMessages, setErrorMessages] = useState({});
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event) => { 
     console.log("ok");
   };
   

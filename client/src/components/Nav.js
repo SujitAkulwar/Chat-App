@@ -3,12 +3,14 @@ import React from 'react'
 const Index = () => {
   return (
       <div className='indexul'>
-        <div>
-              <img
+          <div>
+            <a href='/'>
+                <img
                   src={require('../img/logo.jpg')}
                   alt="description"
                   className='logoimg'
-              />
+                  />
+            </a>
         </div>
         <div>
             <a href='/' className='indexli'>

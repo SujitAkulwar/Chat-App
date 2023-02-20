@@ -1,7 +1,7 @@
 // import React,{useState} from 'react'
 // import { ReactDOM } from 'react';
 import Nav from '../components/Nav'
-import './Register.css';
+import './auth.css';
 
 const Register = () => {
 

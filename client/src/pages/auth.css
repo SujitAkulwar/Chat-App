@@ -11,8 +11,8 @@
 }
 div:hover{
     color: white;
-    cursor: pointer; 
-} 
+    cursor: pointer;
+}
 
 .c{
     text-align: center;
@@ -21,6 +21,7 @@ div:hover{
     font-weight: 700;
     letter-spacing: 1px;
     margin-top: 30px;
+    color:white;
 }
 .d{
     margin: auto;
@@ -34,7 +35,7 @@ div:hover{
 }
 .d,.f1,label{
     background-color:rgb(197, 242, 255); 
-}
+} 
 .f1{
     margin-top: 50px;
     display: flex;
@@ -59,10 +60,13 @@ div:hover{
     padding: 10px;
     font-size: 15px;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-weight: 700;
     border: 1px solid black;
     margin-top: 10px;
+}
+.submit:hover{
+    color: white;
 }
 .i1:hover,.i1:focus{
     background-color: rgb(177, 234, 229);
@@ -72,15 +76,21 @@ label{
     margin-bottom: 10px;
     color: black;
 }
-
 .registerlink{
     background-color: transparent;
     text-align: center;
+    margin: auto;
     margin-bottom: 15px;
-    color: rgb(255, 0, 200);
+    color: rgb(0, 13, 255);
     text-decoration: none;
     font-size: 15px;
+    background-color: rgba(103, 255, 92, 0.452);
+    border: 1px dashed black;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: fit-content;
+    text-align: center;
 }
 .registerlink:hover{
-    color: rgb(57, 50, 255);
+    color: rgb(46, 63, 255);
 }
