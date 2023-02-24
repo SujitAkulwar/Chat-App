@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../components/Nav'
+import Nav from '../../components/Nav/Nav'
 import './Home.css'
 
 const home = (
@@ -17,7 +17,7 @@ const home = (
     </div>
     <div className='homeimgbox'>
       <img
-        src={require('../img/home.jpg')}
+        src={require('../../img/home.jpg')}
         alt="description"
         className='homeimg'
       />

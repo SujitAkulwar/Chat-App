@@ -1,10 +1,11 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router,Redirect,Route,Switch } from 'react-router-dom';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import Register from './pages/Register';
-import Chat from './pages/Chat';
+import Login from './pages/auth/Login';
+import Home from './pages/Home/Home';
+import Register from './pages/auth/Register';
+import Chat from './pages/Chat/Chat';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
 
         <Route path="/login" exact>
           <Login />
+        </Route>
+        <Route path="/Profile" exact>
+          <Profile />
         </Route>
 
         <Redirect to="/" />

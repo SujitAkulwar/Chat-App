@@ -1,11 +1,11 @@
 import React from 'react'
-import Chatbox from './Chatbox'
+import Chatbox from '../Chatbox/Chatbox'
 import './Chats.css'
 const userid = (
     <div className='userid'>
         <div className='userprofil'>
             <img
-              src={require('../img/logo.jpg')}
+              src={require('../../img/logo.jpg')}
               alt="description"
               className='userprofilimg'
             />

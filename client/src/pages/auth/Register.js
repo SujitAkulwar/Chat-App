@@ -1,17 +1,20 @@
-// import React,{useState} from 'react'
-// import { ReactDOM } from 'react';
-import Nav from '../components/Nav'
+import Nav from '../../components/Nav/Nav'
 import './auth.css';
+import { useSelector } from 'react-redux'
+import { Redirect } from "react-router-dom"
 
 const Register = () => {
-
+  
+  var name = useSelector((state) => state.user.username);
+  var Registerform;
   // const [errorMessages, setErrorMessages] = useState({});
 
   const handleSubmit = (event) => {
     console.log("ok");
   };
-  
-  const Registerform = (
+
+  if (name == null) {
+    Registerform = (
     <form onSubmit={handleSubmit} className="f1">
       <label> Email : </label><input type={Text} className="i1" name='name'></input>
       <label> Password : </label><input type={Text} className="i1" name='pass'></input>
@@ -20,7 +23,11 @@ const Register = () => {
         Already User Login here !!
       </a>
     </form>
-  );
+    );
+  } else {
+    Registerform = <Redirect to="/" />
+  }
+  
  
   
   

@@ -5,7 +5,7 @@ const user = (
   <div className='user'>
     <div className='userlogo'>
       <img
-        src={require('../img/logo2.png')}
+        src={require('../../img/logo2.png')}
         alt="description"
         className='userimg'
       />

@@ -7,7 +7,7 @@ const Chatbox = () => {
     const ny = (
         <div className='text1'>
             <img
-                src={require('../img/logo2.png')}
+                src={require('../../img/logo2.png')}
                 alt="description"
                 className='userimg'
             />
@@ -23,7 +23,7 @@ const Chatbox = () => {
                 {text}
             </div>
             <img
-                src={require('../img/logo.jpg')}
+                src={require('../../img/logo.jpg')}
                 alt="description"
                 className='userimg'
             />
