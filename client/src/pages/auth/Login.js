@@ -1,5 +1,3 @@
-// import React,{useState} from 'react'
-// import { ReactDOM } from 'react';
 import Nav from '../../components/Nav/Nav'
 import './auth.css';
 import { useSelector } from 'react-redux'

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import "./Nav.css"
+import { Link } from 'react-router-dom'
 
 const Index = () => {
     // const dispatch = useDispatch();
@@ -10,40 +11,43 @@ const Index = () => {
     if (name == null) {
         username = (
             <>
-                <a href='/login' className='indexli'>
+                <Link to='/login' className='indexli'>
                     LOGIN
-                </a>
-                <a href='/register' className='indexli'>
+                </Link>
+                <Link to='/register' className='indexli'>
                     REGISTER
-                </a>
+                </Link>
             </>
         )
     } else {
         username = (
-            <a href='/profile' className='indexli usernamelogo'>
-                {name}
-            </a>
+            <>
+                <Link to='/chat' className='indexli'>
+                    CHAT
+                </Link>
+                <Link to='/profile' className='indexli usernamelogo'>
+                    {name}
+                </Link>
+            </>
         )
     }    
 
     return (
         <div className='indexul'>
             <div>
-                <a href='/'>
+                <Link to='/'>
                     <img
                     src={require('../../img/logo.jpg')}
                     alt="description"
                     className='logoimg'
                     />
-                </a>
+                </Link>
             </div>
             <div>
-                <a href='/' className='indexli'>
+                <Link to='/' className='indexli'>
                     HOME
-                </a>
-                <a href='/chat' className='indexli'>
-                    CHAT
-                </a>
+                </Link>
+                
                 { username }
             </div>
         </div>

@@ -28,10 +28,6 @@ const Register = () => {
     Registerform = <Redirect to="/" />
   }
   
- 
-  
-  
-  
   return (
     <>
       <Nav/>
