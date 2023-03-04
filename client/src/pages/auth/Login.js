@@ -1,7 +1,7 @@
 import Nav from '../../components/Nav/Nav'
 import './auth.css';
 import { useSelector } from 'react-redux'
-import { Redirect } from "react-router-dom"
+import { Redirect,Link } from "react-router-dom"
 
 const Login = () => {
   
@@ -20,13 +20,13 @@ const Login = () => {
       <label> Email : </label><input type={Text} className="i1" name='name'></input>
       <label> Password : </label><input type={Text} className="i1" name='pass'></input>
       <input type={'submit'} className="submit"></input>
-      <a href='./register' className='registerlink'>
+      <Link to='./register' className='registerlink'>
         New user register here !!
-      </a>
+      </Link>
     </form>
     );
   } else {
-     loginform = <Redirect to="/" />
+     loginform = <Redirect to="/Register" />
   }
   
   return (
