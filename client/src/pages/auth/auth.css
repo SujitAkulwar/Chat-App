@@ -62,11 +62,10 @@ div:hover{
     cursor: pointer;
     margin-bottom: 30px;
     font-weight: 700;
-    border: 1px solid black;
     margin-top: 10px;
 }
 .submit:hover{
-    color: white;
+    color: rgb(224, 224, 224);
 }
 .i1:hover,.i1:focus{
     background-color: rgb(177, 234, 229);

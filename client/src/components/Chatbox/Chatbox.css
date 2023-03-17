@@ -9,7 +9,7 @@
     scroll-behavior: smooth;
     overflow: auto;
     border-radius: 3px;
-    background-image: radial-gradient(circle, rgb(0, 36, 134) 0%,rgb(32, 0, 51)  100%);
+    background-color: rgb(17,27,33);
 }
 
 .chatbox::-webkit-scrollbar{
@@ -18,12 +18,12 @@
 }
 
 .chatbox::-webkit-scrollbar-track{
-  background: #2f2f2f;
+  background: rgb(17,27,33);
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb{
   width: 10px;
-  background: #9b9b9b;
+  background: rgb(17,27,33);
   border: 1px solid #91cbd4;
   border-radius: 5px;
   height: 20px;
@@ -51,16 +51,16 @@
     font-family: 'Roboto', sans-serif;
     padding:10px 20px;
     margin: 0 10px;
-    border-radius: 20px;
+    border-radius: 10px;
     max-width: 600px;
     line-break: loose;
     line-height: 30px;
-    border: 3px groove rgba(255, 255, 255, 0.438);
+    box-shadow: 1px 1px 2px black;
     color: white;
 }
 .m1{
-  background-color: rgb(142, 0, 90);
+  background-color: rgb(32,44,51);
 }
 .m2{
-  background-color: rgb(0, 109, 139);
+  background-color: rgb(32,44,51);
 }

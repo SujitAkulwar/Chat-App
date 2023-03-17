@@ -47,7 +47,6 @@ const Index = () => {
                 <Link to='/' className='indexli'>
                     HOME
                 </Link>
-                
                 { username }
             </div>
         </div>

@@ -5,3 +5,37 @@
     font-weight: bold;
     letter-spacing: 1px;
 }
+.indexli{
+    padding: 0 2vh;
+    text-decoration: none;
+    transition-duration: 0.3s;
+    line-height: 45px;
+    font-size: 25px;
+  }
+  .indexli:hover{
+    color: white;
+    transform: translateY(-4px);
+  }
+  .center{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .indexul{
+    display: flex;
+    font-size: 18px;
+    width: auto;
+    margin: 1vw 0;
+    padding:0 2vw 0 1vw;
+    justify-content:space-between;
+    font-family: 'Poppins', sans-serif;
+  }
+  .logoimg{
+    height: 45px;
+    width: auto;
+    border-radius: 50px;
+  }
+  
