@@ -43,34 +43,30 @@ div:hover{
     width: 250px;
 }
 
-.i1{
+.i1::before,.i1:active,.i1:hover,.i1::after,.i1{
     margin-bottom: 20px;
     color: black;
-    background-color: rgb(151, 198, 194);
+    background-color: rgb(188, 255, 246);
     height: 30px;
     border-radius: 35px;
     padding: 2px 8px;
 }
+
 .submit{
-    justify-content: center;
-    width: auto;
-    height: auto;
+    margin: auto auto 20px auto;
     border-radius: 10px;
-    margin:auto;
-    padding: 10px;
     font-size: 15px;
     cursor: pointer;
-    margin-bottom: 30px;
     font-weight: 700;
-    margin-top: 10px;
+    background-color: transparent;
+    height: 30px;
+    width: 100px;
+    color: black;
 }
 .submit:hover{
-    color: rgb(224, 224, 224);
+    color: rgb(56, 0, 0);
 }
-.i1:hover,.i1:focus{
-    background-color: rgb(177, 234, 229);
-    color: rgb(0, 0, 0);
-}
+
 label{
     margin-bottom: 10px;
     color: black;

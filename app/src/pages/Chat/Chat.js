@@ -4,7 +4,7 @@ import Chats from '../../components/Chats/Chats'
 import User from '../../components/User/User'
 import './Chat.css'
 import { useSelector } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 function Chat() {
 
@@ -12,7 +12,7 @@ function Chat() {
   var showchat;
 
   if (user == null) {
-    showchat = <Redirect to="/Login"/>
+    showchat = <Navigate to="/Login" replace/>
   } else {
     showchat = (
       <>

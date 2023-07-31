@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { useraction } from '../../store/store'
 import "./Profile.css"
-import { Redirect } from "react-router-dom"
+import { Navigate } from "react-router-dom"
 
 const Profile = () => {
 
@@ -12,7 +12,7 @@ const Profile = () => {
   var data;
 
   if (name == null) {
-    data = <Redirect to="/" />
+    data = <Navigate to="/" replace/>
   } else {
     data = (
       <>
