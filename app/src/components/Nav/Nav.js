@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 const Index = () => {
     // const dispatch = useDispatch();
+    
     const name = useSelector((state) => state.user.username);
 
     var username = null;

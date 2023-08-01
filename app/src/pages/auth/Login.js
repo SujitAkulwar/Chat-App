@@ -11,10 +11,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const dispatch = useDispatch();
-  var name = useSelector((state) => state.user.username);
-
   const navigate = useNavigate();
-    
+
+  var name = useSelector((state) => state.user.username);
+  // var userid = useSelector((state) => state.user.userid);
+
   const values = {
     username: username,
     password: password
@@ -26,12 +27,12 @@ const Login = () => {
     axios.post("http://localhost:5001/login", values)
       .then(res => {
         console.log(res.status);
-        if (res.data === "Success") {
+        if (res.status === 200) {
+          console.log(res.data[0].id);
           dispatch(useraction.setuser(username));
+          dispatch(useraction.setuserid(res.data[0].id));
           navigate('/');
-        }else if(res.data === "undefined"){
-          alert("no record found");
-        } else {
+        }else {
           alert("no record found")
         }
       })

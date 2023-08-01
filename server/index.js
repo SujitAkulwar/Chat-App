@@ -39,17 +39,49 @@ app.post('/login', (req, res) => {
     const sql = "SELECT * FROM users WHERE username = ? AND password = ? ";
     
     db.query(sql, [req.body.username, req.body.password], (err, data) => {
-        console.log(req.body,err,data);
+        // console.log(data);
         if (err) {
             return res.status(500).json("Error");
         } 
         if (data.length > 0) {
-            return res.status(200).json("Success");
+            return res.status(200).json(data);
         } else {
             return res.status(401).json("failed");
         }
     })
 
+})
+
+app.post('/chat', (req, res) => {
+    const sql = "select distinct id,username from users;";
+    db.query(sql, (err, data) => {
+        // console.log(data); 
+        if (err) {
+            return res.status(500).json("Error");
+        } 
+        if (data.length > 0) {
+            
+            return res.status(200).json(data);
+        } else {
+            return res.status(401).json("failed");
+        }
+    })
+})
+
+app.post('/loadchats', (req, res) => {
+    const sql = "SELECT * FROM chats WHERE (sender_id = 1  AND receiver_id = 2) OR (sender_id = 2  AND receiver_id =1) ORDER BY timestamp;";
+    console.log(req.body.id1,req.body.id2);
+    db.query(sql, (err, data) => {
+        // console.log(data); 
+        if (err) {
+            return res.status(500).json("Error");
+        } 
+        if (data.length > 0) {
+            return res.status(200).json(data);
+        } else {
+            return res.status(401).json("failed");
+        }
+    })
 })
 
 // const sql2 = "SELECT * FROM users";
