@@ -49,18 +49,16 @@ app.post('/login', (req, res) => {
             return res.status(401).json("failed");
         }
     })
-
 })
 
 app.post('/chat', (req, res) => {
-    const sql = "select distinct id,username from users;";
-    db.query(sql, (err, data) => {
-        // console.log(data); 
+    const sql = "select distinct c.sender_id as id, u.username as username from chats c inner join users u where c.receiver_id= ? and u.id=c.sender_id union select distinct c.receiver_id as id, u.username as username from chats c inner join users u where c.sender_id= ? and u.id=c.receiver_id;";
+    // console.log("hi",req);
+    db.query(sql,[req.body.id,req.body.id] ,(err, data) => {
         if (err) {
             return res.status(500).json("Error");
         } 
-        if (data.length > 0) {
-            
+        if (data.length >= 0) {
             return res.status(200).json(data);
         } else {
             return res.status(401).json("failed");
@@ -69,18 +67,40 @@ app.post('/chat', (req, res) => {
 })
 
 app.post('/loadchats', (req, res) => {
-    const sql = "SELECT * FROM chats WHERE (sender_id = 1  AND receiver_id = 2) OR (sender_id = 2  AND receiver_id =1) ORDER BY timestamp;";
-    console.log(req.body.id1,req.body.id2);
-    db.query(sql, (err, data) => {
+    // console.log(req.body.id1, req.body.id2);
+
+    const sql = "SELECT * FROM chats WHERE (sender_id = ?  AND receiver_id = ?) OR (sender_id = ?  AND receiver_id = ?) ORDER BY timestamp";
+    const values = [
+        req.body.id1,
+        req.body.id2,
+        req.body.id2,
+        req.body.id1
+    ]
+    db.query(sql, values ,(err, data) => {
         // console.log(data); 
         if (err) {
-            return res.status(500).json("Error");
+            return res.status(500).json(err);
         } 
-        if (data.length > 0) {
+        if (data.length >= 0) {
             return res.status(200).json(data);
         } else {
             return res.status(401).json("failed");
         }
+    })
+})
+
+app.post('/sendmessage', (req, res) => {
+    const sql = "INSERT INTO chats (sender_id, receiver_id, message) VALUES (?);";
+    var values = [
+        req.body.id1,
+        req.body.id2,
+        req.body.message
+    ]
+    db.query(sql, [values], (err, data) => {
+        if (err) {
+            return res.json("error");
+        }
+        return res.status(200).json(data);
     })
 })
 

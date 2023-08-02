@@ -11,23 +11,27 @@ import { useraction } from '../../store/store';
 function Chat() {
 
   const user = useSelector((state) => state.user.username);
+  const userid = useSelector((state) => state.user.userid);
   const dispatch = useDispatch();
   var showchat;
 
 
   useEffect(() => {
-    axios.post("http://localhost:5001/chat")
+    const value = {
+      id: userid 
+    };
+    axios.post("http://localhost:5001/chat",value)
       .then(res => {
-        console.log(res.status);console.log("chat");
+        console.log(res.status);
         if (res.status === 200) {
-          console.log(res.data);
+          console.log(res.data,"hi");
           dispatch(useraction.setreceiverids(res.data));
         } else {
           alert("no record found")
         }
-      })
+      }) 
       .catch(err => console.log(err));
-  }, [dispatch]);
+  }, [dispatch,userid]);
 
   if (user == null) {
     showchat = <Navigate to="/Login" replace/>

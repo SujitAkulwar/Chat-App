@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { useraction } from '../../store/store';
-
+import { useRef } from 'react';
 
   
  const User = () => {
@@ -15,6 +15,14 @@ import { useraction } from '../../store/store';
 
   const dispatch = useDispatch();
 
+  const chatdivref = useRef(null);
+  const scrollToBottom = () => {
+      if (chatdivref.current) {
+          const { scrollHeight, clientHeight } = chatdivref.current;
+          chatdivref.current.scrollToBottom = scrollHeight - clientHeight;
+      }
+  };
+   
   const openchats = (item) => {
     dispatch(useraction.setreceiver(item.username));
     dispatch(useraction.setreceiverid(item.id));
@@ -27,12 +35,13 @@ import { useraction } from '../../store/store';
         console.log(res.status);
         if (res.status === 200) {
           dispatch(useraction.setchats(res.data));
+          scrollToBottom();
         } else {
           alert("no record found")
         }
       })
-      .catch(err => console.log(err.message));
-   }
+      .catch(err => console.log(err));
+    }
    
    if (receiver === null) {
      return <div>loading .... </div>
