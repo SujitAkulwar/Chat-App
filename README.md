@@ -4,11 +4,9 @@ Welcome to the ChatApp website repository! This project showcases a chat applica
 
 ## Features
 
-- Real-time messaging
+- Messaging
 - User authentication and registration
-- Message notifications
-- User profiles and avatars
-- Chat rooms and private messaging
+- private messaging
 
 
 ## Screenshots
